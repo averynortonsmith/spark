@@ -8,8 +8,24 @@ Unfortunately, doesn't support negative numbers, since [box drawing characters](
 
 **usage:**
 
-`python
+```python
 import spark
 
-collatz = lambda n: if n <= 1 then [1] else [n] + collatz(3 * n + 1 if n % 2 else n / 2)
-print(spark.chart(collatz(871, height=20)))
+collatz = lambda n: [1] if n <= 1 else [n] + collatz(3 * n + 1 if n % 2 else n / 2)
+print(spark.chart(collatz(871), height=20))
+```
+
+result:
+```
+                               █                                                                                                                                                   
+                               █                                                                                                                                                   
+                               █  ▅                                                                                                                                                
+                             ▆ █  █                                                                                                                                                
+                             █ █▁ █                                                                                                                                                
+                           ▄ █ ██ █                                                                                                                                                
+                           █ █▃██ █▆                                                                                                                                               
+                         █ █▃████▅██                                                                                                                                               
+                ▂ ▆  ▃ █ █▄█████████▇  ▄  ▁ ▅  ▂ ▆                                                                                                                                 
+▁▂▁▂▂▃▂▂▃▂▃▂▅▃▆▄█▅█▇▄█▆███████████████▄█▆▃█▅█▇▄█▅█▇▄▃▂▃▂▂▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▁▂▁▂▂▃▂▄▂▂▁▂▂▃▂▃▂▄▃▂▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+
+```
