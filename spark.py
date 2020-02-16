@@ -12,8 +12,8 @@ def chart(numbers, height=10):
         rowString = ""
         for n in normalized:
             barHeight = n - row
-            if barHeight < 0:
-                rowString += " " if row else "▁"
+            if barHeight <= 0:
+                rowString += " " if row else "_"
             else:
                 rowString += bars[min(7, round(barHeight * 7))]
         result = rowString + "\n" + result

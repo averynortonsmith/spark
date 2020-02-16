@@ -6,7 +6,7 @@ Based on https://github.com/holman/spark/blob/master/spark
 Adds support for multi-row charts.
 Unfortunately, doesn't support negative numbers, since [box drawing characters](https://en.wikipedia.org/wiki/Box-drawing_character) don't have top-aligned blocks.
 
-**usage:**
+**demo:**
 
 ```python
 import spark
@@ -16,16 +16,5 @@ print(spark.chart(collatz(871), height=20))
 ```
 
 result:
-```
-                               █                                                                                                                                                   
-                               █                                                                                                                                                   
-                               █  ▅                                                                                                                                                
-                             ▆ █  █                                                                                                                                                
-                             █ █▁ █                                                                                                                                                
-                           ▄ █ ██ █                                                                                                                                                
-                           █ █▃██ █▆                                                                                                                                               
-                         █ █▃████▅██                                                                                                                                               
-                ▂ ▆  ▃ █ █▄█████████▇  ▄  ▁ ▅  ▂ ▆                                                                                                                                 
-▁▂▁▂▂▃▂▂▃▂▃▂▅▃▆▄█▅█▇▄█▆███████████████▄█▆▃█▅█▇▄█▅█▇▄▃▂▃▂▂▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▁▂▁▂▂▃▂▄▂▂▁▂▂▃▂▃▂▄▃▂▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
 
-```
+![demo.png](demo.png)
